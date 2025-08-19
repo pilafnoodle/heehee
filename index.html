@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Müde Button</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 10%;
+    }
+    #message, #bedArt {
+      display: none;
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+    pre {
+      font-family: monospace;
+      text-align: left;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <button id="tiredButton">Bitte klicken Sie hier, wenn Sie müde sind.</button>
+  
+  <div id="message">dann kannst du im bett liegen bleiben</div>
+  <pre id="bedArt">
+   ____________________
+  |                    |
+  |       BED          |
+  |____________________|
+        ||      ||
+        ||      ||
+  </pre>
+
+  <script>
+    const button = document.getElementById("tiredButton");
+    const message = document.getElementById("message");
+    const bedArt = document.getElementById("bedArt");
+
+    button.addEventListener("click", () => {
+      button.style.display = "none";
+      message.style.display = "block";
+      bedArt.style.display = "block";
+    });
+  </script>
+</body>
+</html>
